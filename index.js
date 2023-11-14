@@ -7,7 +7,7 @@ server.use(express.static('public'));
 // GET localhost:8080/homepage
 server.get('/homepage',(request,response)=>{
     // response.send('<h1>Hello</h1>')
-    response.json({name:"sarfraj abbasi"})
+    response.json({name:"sarfraj"})
 }) 
 
 server.listen(process.env.PORT,()=>{
