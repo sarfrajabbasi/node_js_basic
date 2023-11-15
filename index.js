@@ -9,7 +9,7 @@
 // GET localHost:8080/hompage
 
 server.get('/homepage',(request,response)=>{
-    server.send('hello node js here')
+    response.send('hello node js here')
 })
 
  server.listen(PORT,function(){
