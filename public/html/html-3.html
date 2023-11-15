@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style3.css">
+    <title>Html-3</title>
+</head>
+<body>
+    <ul title="animals">
+        <li>stingRay</li>
+        <li>sharcosucus</li>
+        <li>pirana</li>
+        <!-- nested list -->
+        <ul>
+            <li>hello</li>
+            <li>camcho</li>
+        </ul>
+        <li>pieee</li>
+        <li>fox</li>
+        <li>wolf</li>
+        <li>bear</li>
+    </ul>
+    <ol type="i" start="0" title ="vegitable">
+        <li>tomato</li>
+        <li>patato</li>
+        <!-- nested -->
+        <ol type="a">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+        <li>carrete</li>
+        <li>ladyFinger</li>
+        <li>cvender</li>
+        <li>chilli</li>
+        <li>egg plant</li>
+        <li>ginger</li>  
+     </ol>
+
+     <dl>
+        <dt>Coffee</dt>
+        <dd>- brown hot drink</dd>
+        <dt>milk</dt>
+        <dd>- white cold drink</dd>
+     </dl>
+     <!-- horizontal list like nav -->
+     <ul id="nav">
+        <li class="content"><a href="#home">Home</a></li>
+        <li class="content"><a href="#news">News</a></li>
+        <li class="content"><a href="#contact">Contact</a></li>
+        <li class="content"><a href="#about">About</a></li>
+     </ul>
+
+     <!-- Block and Inline Elements -->
+     <div id="block">
+        <h2>Lorem life</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt tempora illum <span title="my Name" style="color: red; font-weight: bold ; font-family: sans-serif;">sarfraj abbasi</span> provident eveniet perferendis excepturi quae iure minus minima!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, omnis rerum! Repellat <span title="job decription" style="color: darkorange; font-weight: bold;font-family: sans-serif;">web-developer</span> temporibus quaerat quos eius repellendus sapiente doloribus in.</p>
+     </div>
+
+     <!-- HTML iframe -->
+     <iframe src="../html/html-2.html" name="iframe_a" title="this html-2 document" frameborder="0" width="500px" height="300px"></iframe>
+
+     <!-- as a target frame  it refer to the name-->
+     <p><a class="btn" href="../html/html-1.html" target="iframe_a">html-1</a></p>
+     <p><a class="btn2" href="../html/html-2.html" target="iframe_a">html-2</a></p>
+
+     <!-- javascript interactive -->
+     <button type="button" onclick=" setInterval(function(){
+        document.getElementById('para').innerHTML = new Date()
+     },1000)"> time & Date</button>
+     <p id="para"></p>
+
+     <!-- layout elements -->
+
+     <header>
+        <h2>Continent</h2>
+        
+     </header>
+     <section>
+        <nav>
+            <ul>
+                <li><a href="#">Asia</a></li>
+                <li><a href="#">Europe</a></li>
+                <li><a href="#">Antarctica</a></li>
+                <li><a href="#">Amarica</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Asia</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur a dignissimos, magni, et reiciendis voluptate velit quaerat fuga modi culpa ducimus minus? Eaque, natus libero.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis maiores architecto iusto harum excepturi nihil laudantium dicta. Dolor ad vitae animi porro ea aliquid!</p>
+        </article>
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+    <!-- responsive with media queries -->
+    <div class="air">Air</div>
+    <div class="land">Land</div>
+    <div class="water">Water</div>
+<hr>
+    <div class="hello">
+        <h1>Hello World</h1>
+    </div>
+    <div>
+        <div class="menu">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </div>
+        <div class="main">
+            <h2>Holaa mcq</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique natus eos laudantium. Quod, minima est aliquid explicabo laborum, fugiat alias eum et odit provident voluptate odio incidunt autem corporis vero!</p>
+        </div>
+        <div class="right">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo esse excepturi veritatis! Optio odio similique numquam accusantium ipsa sunt?</p>
+        </div>
+    </div>
+    <hr>
+    <p class="copy">&copy copyright to sarfraj abbasi</p>
+
+    <!-- HTML Computer Code Elements -->
+    <div class="code">
+
+    <p >Save the doc.by pressing <kbd title="keyboard Input"></kbd>Ctrl + S<kbd></p>
+        Message form my computer:
+    <p><samp title="sample output">File not found,<br> Press F1 to continue</samp></p>
+    <p><code title="def.some text as computer code">
+       <pre>
+        x= 5;
+        y= 6;
+        z= x + y;
+       </pre>
+
+    </code></p>
+    <p title="def. variable in programming or in maths" >The area of a triangle is : 1/2 x <var>b</var>x <var>h</var>,where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+    </div>
+
+</body>
+</html>

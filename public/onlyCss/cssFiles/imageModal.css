@@ -1,0 +1,99 @@
+/*
+#myImg:details,border-radius will be 5px and cursor would be pointer and transiton duration is 0.3s.
+-->Hover: effect changing the opacity of element to 0.7
+ */
+
+#myImg{
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg{opacity: 0.7;}
+
+/* 
+Modal (BG):- display will be hidden by default and position fixed in place and it sit on top so z-index will be 1 and and also left 0 and top 0 , padding-top is 100px location of the box,width & height is 100% and overflow is auto for enable to scroll when need,Bg-color in fallback is black and with black opactiy is 0.9 
+*/
+/* modal background */
+.modal{
+display: none;
+position: fixed;
+z-index: 1;
+padding-top:100px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.78);
+}
+/*
+modal-content(image):- image margin will  be auto and display will be block with width 100% also max-width is 700px
+*/
+/* image */
+.modal-content{
+margin: auto;
+display: block;
+max-width: 700px;
+}
+/* 
+#caption(modal-img-caps):- margin will auto display as block with width 80%  max-width 700px and text-align center color will be #ccc and padding t/b:-10px,0 and height is 150px; 
+*/
+/* image caption */
+#caption{
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+text-align: center;
+color: #ccc;
+padding: 10px 0;
+height: 150px;
+}
+
+/* add animation on modal-content,caption which is zoom effect by scale 0.1 to 1 */
+
+/* add animation */
+
+.modal-content,#caption{
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from{transform: scale(0.1);}
+    to{transform: scale(1);}
+}
+
+/* 
+Close button:-- the positon of this btn is absoute and top is 15px and rigth 35px with color #f1f1f1,font-size will be 40px and font-weight is bold with trasiton it 0.3s
+--> now hover and foucs on btn will change color is #bbb and text-decoration will none and cursor will be pointer 
+ */
+
+ .close{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+ }
+
+ .close:hover,
+ .close:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+ }
+
+
+/* 100% image width on smaller screen:-set @media only screen and max-width will be 700px: then change the .modal-conten width is 100% */
+
+/* media screen */
+@media only screen and(max-width:700px) {
+    .modal-content{
+        width: 100%;
+    }
+}

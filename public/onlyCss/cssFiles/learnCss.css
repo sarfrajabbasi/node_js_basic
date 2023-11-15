@@ -1,0 +1,345 @@
+*{
+    margin: 10px;
+}
+body{
+    background-color: rgb(40, 180, 226);
+    opacity: 1;
+}
+div{
+    background-color: green;
+}
+
+div.first{
+    opacity: 0.1;
+}
+div.second{
+    opacity: 0.3;
+}
+div.third{
+    opacity: 0.6;
+}
+p{
+    color: white;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+/*
+body{
+    background-color: black;
+    background-image: url("https://source.unsplash.com/random/500x500/?nature");
+    /* background-repeat: repeat-x; */
+    /* background-repeat: no-repeat; */
+    /* background-position: left top ; */
+    /* background-attachment: fixed;} */
+
+/* sorthand property */
+/* body{
+    background: black url("https://source.unsplash.com/random/500x500/?nature") no-repeat fixed left top ;
+} */
+
+
+p.dotted {
+    border-style: dotted;
+    border-width: 5px;
+}
+p.dashed {border-style: dashed;}
+p.solid {
+    border-style: solid;
+    border-width: medium;
+}
+p.double {
+    border-style: double;
+    /* border-width: 2px; */
+}
+p.groove {
+    border-style: groove;
+    border-width: thick;
+}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+p.ridge{
+    border-top-style:dotted ;
+    border-right-style:solid ;
+    border-left-style:solid ;
+    border-bottom-style:dotted ;
+    border-color: red;
+}
+
+/* four values */
+p.inset{
+    border-style: dotted solid double dashed;
+}
+/* Three values */
+p.inset{
+    border-style: dotted solid double ;
+}
+/* Two values */
+/* p.inset{
+    border-style: dotted solid ;
+} */
+/* One values */
+
+/* p.inset{
+    border-style: dotted ;
+} */
+
+p.solid{
+    border: 5px solid pink;
+}
+
+p.solid{
+    margin: 25px 50px 75px 100px ;
+    padding:3%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(115, 138, 32);
+}
+
+div.test{
+    width: 300px;
+    box-sizing: border-box;
+    padding: 25px;
+    background-color: gold;
+    color: black;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* outlines */
+
+
+/* icons */
+
+i,i.material-icons{
+    font-size: 50px;
+    color: blue;
+    text-shadow:4px 4px 15px rgb(31, 28, 28);
+}
+i.glyphicon-heart{
+    color: rgb(252, 77, 77);
+}
+i.glyphicon-heart:hover,i.material-icons:hover{
+    color: rgb(206, 24, 24);
+}
+i.glyphicon-cloud:hover{
+    color: white;
+}
+
+/* link */
+
+a{
+    font-size: 20px;
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+    border: 2px solid green;
+}
+
+a:link{
+    background-color: rgba(36, 65, 22, 0.781);
+    text-decoration: none;
+   
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+a:link,a:visited{
+    background-color: #f44336;
+    width: 100px;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+}
+
+a:hover{
+    color:white;
+    font-family: monospace ;
+    background-color: rgb(116, 224, 44);
+}
+
+a:active{
+    color: white;
+    background-color: hotpink;
+
+}
+/* link box button */
+
+a.boxButton:link,a.boxButton:visited{
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center ;
+    text-decoration: none;
+    display: block;
+    width: 200px;
+}
+a.boxButton:hover,a.boxButton:active{
+    background-color: green;
+    color: white;
+}
+
+/* cursor */
+
+span{
+background-color: black;
+  width: 100px;
+  display: inline-block;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 1px;
+  padding: 5px;
+  border: 2px dotted red ;
+
+}
+
+/* List */
+
+ol{
+    background-color:#ff9999;
+    padding: 20px;
+}
+
+ul{
+    background-color:#3399ff;
+    padding: 20px;
+}
+
+ol li{
+    background-color: #ffe5e5;
+    color: darkred;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+ul li{
+    background-color: #cce5ff;
+    color: darkblue;
+    padding: 5px;
+    margin: 5px;
+}
+
+ul.first {
+    background-color: #f1f1f1;
+    border-left: 5px solid red;
+    list-style-type:none;
+    padding:10px 20px ;
+}
+
+ul.second{
+    background-color: white;
+    list-style-type:none;
+    padding: 0;
+    border: 1px solid #ddd;
+}
+
+ul.second li{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+ul.second li:last-child{
+    border-bottom: none;
+}
+
+/* All list style types */
+
+
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: disc;}
+ul.c {list-style-type: square;}
+
+ol.d {list-style-type: armenian;}
+ol.e {list-style-type: cjk-ideographic;}
+ol.f {list-style-type: decimal;}
+ol.g {list-style-type: decimal-leading-zero;}
+ol.h {list-style-type: georgian;}
+ol.i {list-style-type: hebrew;}
+ol.j {list-style-type: hiragana;}
+ol.k {list-style-type: hiragana-iroha;}
+ol.l {list-style-type: katakana;}
+ol.m {list-style-type: katakana-iroha;}
+ol.n {list-style-type: lower-alpha;}
+ol.o {list-style-type: lower-greek;}
+ol.p {list-style-type: lower-latin;}
+ol.q {list-style-type: lower-roman;}
+ol.r {list-style-type: upper-alpha;}
+ol.s {list-style-type: upper-latin;}
+ol.t {list-style-type: upper-roman;}
+ol.u {list-style-type: none;}
+ol.v {list-style-type: inherit;}
+
+#customers{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,#customers th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers  tr:nth-child(even){
+    background-color: #ddd;
+}
+#customers th{
+    padding: 12px,0,12px;
+    text-align: left;
+    background-color: rgb(77, 172, 77);
+    color: white;
+}
+#customers tr:hover{
+    background-color: #f54141;
+}
+
+/* fake data table */
+
+#userData{
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+#headData th,#userData td{
+    border: 2px solid #ddd;
+    padding: 8px;
+    text-transform: capitalize;
+}
+
+#userData tr:nth-child(even){
+    background-color: #ddd;
+}
+#userData tr:hover{
+    background-color: rgb(19, 175, 226);
+    color: white;
+}
+#headData th{
+padding: 12px,0,12px;
+text-align: left;
+background-color: rgb(75, 72, 72);
+color: white;
+}
+

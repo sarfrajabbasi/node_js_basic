@@ -1,0 +1,95 @@
+body{
+    background-color: rgb(65, 167, 18);
+}
+a{
+    background-color: rgb(31, 70, 199);
+    color: aliceblue;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    
+}
+
+img{
+    display: block;
+    margin-top: 20px;
+    margin-left: 30px;
+    max-width: 200px;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    /* float: right; */
+}
+/* 
+a:link,a:visited{
+    color: white;
+    background-color: rgb(94, 22, 22);
+    text-decoration: none;
+    padding: 15px 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+a:hover,a:active{
+    background-color: rgb(250, 69, 69);
+} */
+
+
+/* 
+body{
+    background-image: url('https://source.unsplash.com/UM6icC4s4gQ');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: cover; */
+    /* background-size: 50%,50%; */
+/* }  */
+
+
+
+/* Tables:-------- */
+th,td{
+    border:2px solid rgb(240, 232, 232);
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: left;
+    font-family: sans-serif;
+    /* border-radius: 10px; */
+    /* border-style: outset; */
+    border-color: rgb(212, 64, 205);
+}
+/* td,th{
+    background-color: wheat;} */
+tr:hover{
+    background-color: #D6EEEE;
+    /* border-bottom:30px solid #ddd ; */
+}
+
+
+
+ table{
+    border-spacing: 10px;
+    width: 100%;
+}
+
+/* Zebra-strip  */
+
+/* .tr:nth-child(even){
+    background-color: rgba(17, 15, 15, 0.4);
+}
+.char:nth-child(even),.empty:nth-child(even){
+    background-color:rgba(17, 15, 15, 0.4);
+} */
+ /*
+
+th{
+    width: 20%;
+}
+tr{
+    height: 200px;
+} */
+
+
+
+/* colgroup */
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../cssFiles/course1.css" />
+
+    <title>Course-Css</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+      </div>
+    </div>
+    <!-- flex menu -->
+    <div class="wrapper">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="#" class="fb">Facebook</a></li>
+          <li><a href="#" class="tw">Twitter</a></li>
+        </ul>
+      </nav>
+      <div style="margin: 20px;">
+        <span>Layout:</span>
+        <button class="stack">Stack</button>
+        <button class="grid">Grid</button>
+    </div>
+      <section id="blocks">
+        <!-- art-1 -->
+        <article>
+            <h2>Cats: Secret World Rulers Revealed</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi facilis, est similique eos ea doloremque repudiandae nemo reprehenderit ad fugiat Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eligendi a placeat dolore minus neque accusamus ipsum quae optio unde! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, inventore.</p>
+        </article>
+        
+        <!-- art-2 -->
+        <article>
+            <h2>Toilet Paper: Unrolling the Conspiracy</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus amet quis in aspernatur error dolorem quo dicta? Itaque velit fuga nihil aperiam sit! Dicta hic ullam, rem commodi ex maiores quod officia est fugit accusantium. Eligendi possimus in earum, reprehenderit vel repudiandae nam minus voluptate consequuntur hic saepe voluptas vitae numquam expedita quas officia quidem a! Suscipit, quae unde?</p>
+        </article>
+
+
+        <!-- art-3 -->
+        <article>
+            <h2>Worst Haircuts: Selfies Don't Lie</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos sapiente ab, maxime quis quos harum enim sunt quas commodi natus rem recusandae suscipit veritatis itaque aspernatur odit in deserunt et quia qui! Maxime voluptas quo numquam dolore possimus sint magnam minus? Repellat optio nemo libero blanditiis ea architecto minima placeat eligendi adipisci numquam ducimus fugit omnis odio, obcaecati aperiam, aspernatur aliquam exercitationem, consectetur veritatis. Illum qui amet illo consequatur ut?</p>
+        </article>
+
+        <!-- art-4 -->
+        <article>
+            <h2>Aliens Demand: Take Me to Your Fridge</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident suscipit architecto ipsa quis illum aliquam odio pariatur, minus blanditiis earum numquam doloremque dolorem? Deserunt assumenda natus fugiat. Voluptas et voluptatem facere maxime aspernatur molestiae deleniti odit, culpa aut esse obcaecati rerum eum fugit consequuntur nemo aperiam ipsa a aliquid soluta veniam inventore autem possimus. Ipsam, alias. Asperiores velit, voluptas adipisci, hic dicta deleniti provident ducimus suscipit ex quod cumque dolor, corporis temporibus nam molestiae facilis sapiente illum. Voluptates, eius voluptatum.</p>
+        </article>
+
+        <!-- art-5 -->
+        <article>
+            <h2>Socks Conspiracy: Where Do They Go?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur nesciunt numquam nemo ut dolore quas fugiat atque corrupti recusandae enim, iste aut vero obcaecati quam voluptatum a. Magni odit velit tempore autem sed eligendi similique recusandae blanditiis vel, dignissimos aliquam ducimus nesciunt, quaerat dolore saepe provident beatae, porro sequi accusantium at veniam ut temporibus. Corporis, maxime? Inventore dolorum nemo, obcaecati officiis deserunt natus totam impedit maiores quaerat sapiente magni optio aliquam saepe odit fugiat provident quibusdam ipsam pariatur dicta voluptate possimus similique vero sint aut! Doloribus aperiam itaque vel!</p>
+        </article>
+
+        <!-- art-6 -->
+        <article>
+          <h2>Dogs Debate: Who's a Good Human?</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quas? Eveniet, explicabo? Non tenetur vitae modi nisi deleniti aut magni? Eius tempore consequatur dignissimos ab reprehenderit porro animi molestias dolore sapiente? Laudantium dolorem quia ut. Expedita similique illum tenetur sit a corrupti perferendis quis hic exercitationem nihil fugit molestiae quam vitae quidem iste ipsam placeat eligendi laboriosam repellendus iusto, id totam. Quisquam, deserunt? Debitis natus ipsum, dolores quo sed minus earum fugiat temporibus? Inventore, optio iste cum enim ducimus iusto, qui est repudiandae cupiditate voluptatum commodi sunt corrupti blanditiis perferendis nostrum deleniti odio ab impedit soluta modi esse, dicta repellat.</p>
+        </article>
+
+      </section>
+    </div>
+  </body>
+  <script>
+    const stack = document.getElementsByClassName('stack')[0];
+    const grid = document.getElementsByClassName('grid')[0];
+    const article = document.getElementsByTagName('article')
+    // console.log(stack,grid,article);
+
+    stack.onclick = function(){
+      for(let i=0;i<article.length;i++){
+        article[i].classList.add('stack');
+      }
+    }
+    grid.onclick = function(){
+      for(let i=0;i<article.length;i++){
+        // console.log(article[i].classList);
+        article[i].classList.remove('stack');
+      }
+    }
+    </script>
+</html>

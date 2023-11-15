@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cssFiles/advance4.css">
+    <title>css-advance-3</title>
+</head>
+<body>
+    <div class="center">
+        <div class="pagination">
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo</a>
+        </div>
+    </div>
+    <ul class="breadcrumb">
+        <li><a href="#">hell</a></li>
+        <li><a href="#">heavan</a></li>
+        <li><a href="#">frnace</a></li>
+        <li><a href="#">lost</a></li>
+        <li>Italy</li>
+    </ul>
+
+    <!--Css Multi-Column Layout -->
+    <div class="newspaper">
+        <h2 id="head">Sarfraz abbasi</h2>
+
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat corporis saepe reiciendis, necessitatibus tempore officiis dicta odit debitis aperiam nostrum, eos soluta doloribus totam possimus eum cumque cupiditate quia earum? Assumenda sequi perspiciatis deleniti inventore nihil maxime ut voluptate eos nostrum neque, cum dolores sapiente optio mollitia obcaecati deserunt tempore natus esse accusamus eveniet numquam dolore hic! Reiciendis, veritatis, rerum temporibus recusandae aliquam amet aliquid modi fugiat, velit harum nobis! Iusto harum earum necessitatibus corporis repellendus non, impedit ea eos eveniet in reiciendis repellat dolore minima pariatur odit. Aperiam quasi ipsa qui minus unde, harum hic tempore enim veniam accusamus.
+    </div>
+
+    <div class="resize">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi delectus, nobis eos nemo velit qui? Sequi id ab beatae cum vitae, sed consequuntur? Earum consectetur commodi esse a iure excepturi!</div>
+
+    <!-- CSS varibales -->
+    <!-- define reusable colors: -->
+    <div class="buttonVar">
+        <span>Hello</span>
+    </div>
+    <div class="buttonVar">
+        <span>Hello</span>
+    </div>
+
+    <p class="font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, id!</p>
+    <div class="dark-theme"></div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle">Toogle Dark Mode</button>
+    <!--Real-Time Color Picker  -->
+    <input type="color" id="color-picker">
+    <div id="color-change-element"></div>
+
+    <!-- font-size adjuster -->
+    <input type="range" id="font-size-slider">
+    <p id="adjustable-text">text-size</p>
+
+    <!-- Interactive Button Effect -->
+
+    <button id="interactive-button">Hover me</button>
+    
+    <div class="boxSizing"></div>
+</body>
+<script>
+    document.documentElement.style.setProperty('--primary-color',"yellow");
+
+    // toggle(dark-mode)
+    const toggleButton = document.getElementById('dark-mode-toggle');
+     const body = document.body;
+
+     toggleButton.addEventListener("click",()=>{
+        if(body.classList.contains("dark-mode")){
+            body.classList.remove('dark-mode')
+        }else{
+            body.classList.add('dark-mode')
+        }
+     })
+
+    //  color-picker
+
+    const colorPicker = document.getElementById('color-picker');
+    const changeColorElement = document.getElementById('color-change-element');
+
+    colorPicker.addEventListener('input',()=>{
+        const selectColor = colorPicker.value;
+console.log(selectColor);
+        changeColorElement.style.setProperty('--bg-color',selectColor)
+    })
+
+    // font-size adjuster
+
+    const fontSizeSlider = document.getElementById('font-size-slider');
+    const adjustableText =document.getElementById('adjustable-text');
+
+    fontSizeSlider.addEventListener('input',()=>{
+        const newSize = fontSizeSlider.value + "px";
+        adjustableText.style.setProperty('--font-size',newSize)
+    })
+
+  // Intertactive Button Effect
+const intertactiveButton = document.getElementById('interactive-button');
+
+intertactiveButton.addEventListener("mouseenter",()=>{
+    intertactiveButton.style.setProperty('--hover-color',"aqua");
+
+})
+
+intertactiveButton.addEventListener("mouseleave",()=>{
+    intertactiveButton.style.removeProperty('--hover-color')
+})
+</script>
+</html>

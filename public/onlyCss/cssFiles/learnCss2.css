@@ -1,0 +1,210 @@
+
+.imgbox{
+    float:left;
+    text-align: center;
+    width: 250x;
+    border: 1px solid grey;
+    margin: 4px;
+    padding: 6px;
+}
+button{
+    width: 100%;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+button:hover{
+    background-color: rgb(39, 196, 39);
+    color: white;
+}
+
+#panel,.flip{
+    float: left;
+    font-size: 16px;
+    padding:10px ;
+    text-align: center;
+    background-color:rgb(149, 238, 149);
+    border: 1px solid #a6d8a8;
+}
+#panel{
+    display: none;
+}
+.flip:hover{
+    background-color: darkseagreen;
+    color: white;
+}
+
+/* div max-width,width, margin auto */
+
+div.ex1{
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    margin: auto;
+    width: 500px;
+    border: 3px solid #73AD21;
+}
+
+div.ex2{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    margin: auto;
+    max-width: 500px;
+    border: 3px solid #73AD21;
+}
+
+/* positions */
+
+.static{
+    position: static;
+    border: 2px solid red;
+}
+
+.relative{
+    max-width: 200px;
+    font-size: 14px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid #73AD21;
+    position: relative;
+    left: 0;
+    top: 200px;
+}
+.absolute{
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    height: 40px;
+    right: 50px;
+    width: 100px;
+    border: 3px solid #73Ad21;
+}
+
+.sticky{
+    color: white;
+    position: sticky;
+    top:0;
+    padding: 10px;
+    background-color: #73AD21;
+    border: 2px solid red;
+}
+
+/* how to position text over an image */
+
+.container{
+    position: relative;
+}
+
+.topLeft{
+    position: absolute;
+    top:8px;
+    left: 16px;
+    font-size: 24px;
+    border: 2px solid black;
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 5px 5px 4px rgb(30, 32, 136);
+}
+.topRight{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 24px;
+    border: 2px solid black;
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight:bold;
+    text-shadow: 5px 5px 5px rgb(92, 30, 161);
+}
+
+.bottomLeft{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 24px;
+    border: 2px solid black;
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight:bold;
+    text-shadow: 5px 5px 5px rgb(92, 30, 161);
+}
+.bottomRight{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 24px;
+    border: 2px solid black;
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight:bold;
+    text-shadow: 5px 5px 5px rgb(92, 30, 161);
+}
+.center{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight:bold;
+    text-shadow: 5px 5px 5px rgb(92, 30, 161);
+}
+
+.img1{
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+
+}
+
+/* set the shape of element shape and displayed */
+.img2{
+    position: absolute;
+    clip: rect(0px,60px,200px,0px);
+
+}
+#imgTree{
+    position: absolute;
+    left: 0 ;
+    top: 1050px;
+    z-index: -1;
+}
+
+.container1{
+margin: 200px;
+position: relative;
+}
+
+.black-box{
+    position: relative;
+    z-index: 1;
+    border: 2px solid black;
+    height: 100px;
+    margin: 30px;
+}
+
+.gray-box{
+position: absolute;
+z-index: 3;/*gray box above all box*/
+background-color: lightgray;
+height: 60px;
+width: 70%;
+left: 50px;
+top: 50px;
+
+}
+
+.green-box{
+    position: absolute;
+    background-color: green;
+    z-index: 2;/*above black-box*/
+    width: 35%;
+    left: 270px;
+    top: -15px;
+    height: 100px;
+}
+

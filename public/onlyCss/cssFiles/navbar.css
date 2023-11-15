@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1f1;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+
+
+}
+
+li a{
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000;
+
+}
+
+li a.active{
+background-color: #04AA6D;
+color: white;
+}
+
+li a:hover:not(.active){
+background-color: #555;
+color: white;
+}
+
+.leftDiv{
+    margin-left: 25%;
+    padding:1px 16px;
+    height: 1000px;
+}
+
+/* side nav to top nav when screen is less 900px */
+@media screen  and (max-width:900px) {
+    ul{
+        width:100%;
+        height:auto;
+        position: relative;
+    }
+
+    ul li a{
+        float: left;
+        padding: 15px;
+    }
+
+    .leftDiv{
+        margin-left: 0;
+    }
+}
+/* side nav to veritcal nav and center nav-links when screen is less 400px */
+
+@media screen  and (max-width:400px) {
+    ul li a{
+        float: none;
+        text-align: center;
+    }
+}

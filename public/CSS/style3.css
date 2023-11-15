@@ -1,0 +1,219 @@
+body{
+    font-family: verdana;
+}
+/* Horizontal list with Css */
+
+#nav{
+    list-style-type: none;
+    margin: 0;
+    padding:0 ;
+    overflow: hidden;
+    background-color: #333333;
+}
+.content{
+float: left;
+}
+
+.content a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+
+}
+.content a:hover{
+    background-color: #111111;
+}
+
+#block{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+/* iframe */
+
+iframe{
+    border: none;
+}
+.btn,.btn2{
+    background-color: rgb(212, 203, 203);
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid black
+}
+
+/* layout style */
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* style header */
+header{
+    background-color: #000000;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+/* two columns/boxes that floats next to each other */
+
+nav{
+    float: left;
+    width: 30%;
+    height: 300px;/*only for demonstration should be removed*/
+    background: wheat;
+    padding: 20px;
+
+}
+
+/* style the list */
+ nav ul{
+    list-style-type: none;
+    padding: 0;
+ }
+
+ article{
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #c0bcbcf1;
+    height: 300px;
+ }
+ 
+ /* floats after columns */
+
+ section::after{
+    content: "";
+    display: table;
+    clear: both;
+ }
+
+/* style the footer */
+
+footer{
+    background-color: #4e4646;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout-makes the tow columnn/boxes stack on top of each other instead of next to each other,on small screens */
+
+@media(max-width:600px){
+    nav,article
+{
+    width: 100%;
+    height: auto;
+}}
+
+
+/* Media Queries */
+
+.air{
+    background-color: skyblue ;
+    padding: 20px;
+    float:left ;
+    width:20% ;
+}
+
+.land{
+    background-color: rgb(136, 74, 30);
+    padding: 20px;
+    float: left;
+    width: 60%;
+}
+
+.water{
+    background-color: rgb(31, 122, 226);
+    padding: 20px;
+    float: left;
+    width: 20%;
+}
+
+/* media */
+
+@media screen and (max-width:800px) {
+    .air,.land,.water{
+        width: 100%;
+    }
+}
+
+/* responsive  */
+
+.menu{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+.menu a{
+    background-color: rgb(77, 75, 75);
+    padding: 8px;
+    margin-top:7px ;
+    display: block;
+    width: 100%;
+    color:white;
+}
+
+.main{
+    float: left;
+    width: 60%;
+    padding: 0,20px;
+}
+
+.right{
+    background-color: #524c4c;
+    float: left;
+    width: 20%;
+    padding:15px;
+    margin-top: 7px;
+    text-align: center;
+
+}
+
+/* media queries responsive */
+@media only screen and (max-width:620px) {
+/* for mobile phones */
+.menu,.main,.right{
+    width: 100%;
+}
+}
+
+
+.hello{
+    background-color: #000000;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+.copy{
+    background-color: rgb(15, 13, 13);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 7px;
+}
+
+.code{
+    background-color: #000000;
+    color:white;
+    padding: 15px;
+    margin: 7px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.code p,pre{
+    background-color: gray;
+}

@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ccc;
+}
+
+.container{
+    margin: auto auto;
+    width: 640px;
+    height: 640px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+
+.white{
+    background-color: #fff;
+    color:black ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.black{
+    display: flex;
+    background-color: #444;
+    color:white ;
+    justify-content: center;
+    align-items: center;
+}

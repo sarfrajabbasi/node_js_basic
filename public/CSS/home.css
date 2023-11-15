@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+}
+
+li{
+    background-color: brown;
+    width: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 30px;
+    margin: 10px;
+}
+a{
+    color: rgb(255, 255, 255);
+}

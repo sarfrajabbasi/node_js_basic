@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../cssFiles/imageModal.css" />
+    <title>Image Modal</title>
+  </head>
+  <body>
+    <img
+      src="https://source.unsplash.com/random/?egypt-pyramid"
+      alt="Egypt Pyramid"
+      id="myImg"
+      width="300"
+      height="200"
+    />
+
+    <!-- modal -->
+
+    <div id="myModal" class="modal">
+      <span class="close">&times</span>
+      <img
+        src="https://source.unsplash.com/random/?egypt-pyramid"
+        class="modal-content"
+        id="img01"
+      />
+      <div id="caption"></div>
+    </div>
+  </body>
+  <script>
+
+    // target modal class and myimg id,img01 id also caption id.
+    var modal = document.getElementById('myModal');
+
+    // after get image then insert it inside the modal use it's alt for text.
+    var myImg = document.getElementById('myImg');
+    var img  = document.getElementById('img01');
+    var caption = document.getElementById('caption');
+
+    // when click on the myimg then it open the modal mean display is block;
+
+    myImg.addEventListener("click",function(){
+        modal.style.display = "block";
+        img.src = this.src
+        caption.innerText = this.alt
+    })
+
+    // Get span element that closes the modal.
+    var close = document.getElementsByClassName('close')[0];
+    // when use clicks on span(x) close the modal.
+    close.onclick = function(){
+        modal.style.display = "none";
+    }
+  </script>
+</html>

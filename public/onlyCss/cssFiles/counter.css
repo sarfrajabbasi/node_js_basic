@@ -1,0 +1,37 @@
+body{
+    counter-reset: section;
+}
+
+ /* h2::before{
+    counter-increment: section;
+    content: "Section " counter(section)" :- ";
+}  */
+
+
+/* nesting Counters */
+
+.section{
+    counter-reset: subsection;
+}
+
+.section::before{
+    counter-increment: section;
+    content: "Section " counter(section) " . " ;
+}
+
+.subsection::before{
+    counter-increment: subsection;
+    content: counter(section)"."counter(subsection)" " ;
+}
+
+/* outlined lists */
+
+ol{
+    list-style-type: none;
+    counter-reset: list;
+}
+
+li::before{
+    counter-increment: list;
+    content: counters(list,".")" " ;
+}

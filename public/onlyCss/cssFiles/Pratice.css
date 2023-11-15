@@ -1,0 +1,220 @@
+
+/* Header with Navigation and Logo: */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.logo{
+    font-size: 24px;
+}
+nav{
+    display: flex;
+}
+
+nav a{
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Product Grid: */
+
+.product-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.product{
+    flex:0 0 calc(33.33% - 20px) ;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.product img{
+    width: 70%;
+    height: 100px;
+}
+
+/* Footer with Social Icons: */
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.social-icons a{
+    color:#fff;
+    margin: 0 auto;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.social-icons a:hover{
+    font-size: 24px;
+}
+
+.fa {  
+    padding: 20px;  
+    text-align: center;  
+    margin: 5px 2px;  
+    font-size: 30px;  
+    width: 20px;  
+    border-radius: 50%;
+  }  
+  .fa-facebook {  
+    background: #3B5998;  
+    color: white;  
+  }  
+  .fa-twitter {  
+    background: #55ACEE;  
+    color: white;  
+  }  
+  .fa-pinterest {  
+    background: #cb2027;  
+    color: white;  
+  }  
+  .fa-linkedin {  
+    background: #007bb5;  
+    color: white;  
+  }  
+  .fa-instagram {  
+    background: #125688;  
+    color: white;  
+  }  
+  .fa-youtube {  
+    background: #bb0000;  
+    color: white;  
+  }  
+  .fa-google {  
+    background: #dd4b39;  
+    color: white;  
+  }  
+  .fa-snapchat-ghost {  
+    background: #fffc00;  
+    color: white;  
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;  
+  }  
+  .fa-skype {  
+    background: #00aff0;  
+    color: white;  
+  }  
+  .fa:hover {  
+      opacity: 0.9;  
+  }  
+
+
+  /* Responsive Sidebar and Main Content: */
+
+  .container{
+    margin-top:10px ;
+    display: flex;
+  }
+
+  .sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    height: 300px;
+
+  }
+
+  .content{
+    flex:3 ;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    height: 300px;
+  }
+
+  @media screen and (max-width:768px) {
+    .container{
+        flex-direction: column;
+    }
+    .sidebar,.content{
+        flex: 1;
+        font-size: 1.5rem;
+    }
+    
+  }
+
+  /* Centered Login Form */
+
+  .container2{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-form{
+    background-color:#f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .login-form h2{
+    text-align: center;
+  }
+
+  .login-form input, .login-form button{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+
+
+/* course link styles */
+
+.course{
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: auto;
+  list-style-type: none;
+}
+.course li{
+  margin: 0;
+}
+
+.course a{
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  background-color: #444;
+  padding: 10px;
+  color: #f2f2f2;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+
+.course a:hover{
+  background-color: black;
+}
+
+

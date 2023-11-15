@@ -1,0 +1,249 @@
+
+.flow{
+    width:200px;
+    height: 50px;
+    border: 2px solid black;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.float1{
+    /* float: right; */
+    float: left;
+    /* float: none; */
+width: 170px;
+height: 170px;
+margin-left:15px;
+margin-right:15px;
+}
+.float2{
+    float: left;
+    padding: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    
+    border-radius: 60px;
+}
+.div1{
+background-color: red;
+}
+.div2{
+background-color: yellow;
+}
+.div3{
+background-color: green;
+}
+
+
+/* clear and clearflix */
+
+.d1{
+    float: left;
+    padding: 10px;
+    border: 3px solid #37b318;
+}
+
+.d2{
+    padding: 10px;
+    border: 3px solid red;
+}
+
+.d3{
+    float: left;
+    padding: 10px;
+    border: 3px solid #37b318;
+}
+
+.d4{
+    clear: left;
+    padding: 10px ;
+    border: 3px solid red;
+}
+
+.clearfixDiv{
+    border: 3px solid rgb(221, 63, 174);
+    padding: 5px;
+}
+
+.imgg1{
+    float: right;
+}
+
+.imgg2{float: right;}
+
+/* as long as able to keep control of margins and padding(else see scollbars) */
+/* .clearfixDiv{
+    overflow: auto;
+} */
+
+/* new morden clearfix hack that is  safe to use and code is use for most  webpages */
+
+.clearfixDiv::after{
+    content:"";
+    clear:both;
+    display: table;
+}
+
+.box,.img-container{
+    box-sizing: border-box;
+}
+
+.box{
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+}
+
+.clearfix1::after{
+content: "";
+clear: both;
+display: table;
+}
+
+.img-container{
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.clearfix1::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Equal Height Boxes */
+
+.box-height{
+    box-sizing: border-box;
+}
+
+.box-height{
+    float: left;
+    width: 50%;
+    padding: 50px;
+    height: 300px;
+}
+
+.clearfix-height::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: dodgerblue;
+}
+
+.flex-container .flexbox{
+background-color: #f1f1f1;
+width: 50%;
+margin: 10px;
+text-align: center;
+line-height: 75px;
+font-size: 30px;
+}
+
+/* Web Layout */
+
+*{
+    box-sizing: border-box;
+}
+
+
+.header,.footer{
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+
+.column{
+    float: left;
+    padding: 15px;
+}
+
+.clearfix3::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.menu{
+    width: 25%;
+}
+
+.content{
+    width: 75%;
+}
+
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: rgb(50, 173, 132);
+    color: white;
+    font-family: sans-serif;
+}
+
+.menu li:hover{
+    background-color: rgb(43, 141, 141)
+}
+
+/* navigation Menu */
+
+ul.nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* float li */
+ul.nav li{
+    float: left;
+}
+
+ul.nav li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding:12px 16px ;
+    text-decoration: none;
+}
+
+.active{
+    background-color: red;
+}
+
+ul.nav li a:hover{
+    background-color: #111;
+}
+.assassin{
+   float: right;
+   width: 120px;
+   border: 1px dotted black;
+   padding: 10px;
+   text-align: center;
+   margin: 0px 0px 15px 20px;
+
+}
+/* first letter float left */
+span{
+    float: left;
+    width: 0.7em;
+    font-size:400% ;
+    font-family: courier;
+    line-height: 80%;
+}
+
