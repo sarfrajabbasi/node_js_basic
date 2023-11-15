@@ -8,9 +8,11 @@
 
 // GET localHost:8080/hompage
 
-server.get('/homepage')
+server.get('/homepage',(request,response)=>{
+    server.send('hello node js here')
+})
 
  server.listen(PORT,function(){
     console.log(`Server bind at port no:${PORT}`);
-
+    
  })
