@@ -1,3 +1,4 @@
+require('dotenv').config(); 
  const express = require('express');
 
  const server = express();
@@ -27,5 +28,6 @@ server.get("/about",(request,response)=>{
 
  server.listen(PORT,function(){
     console.log(`Server bind at port no:${PORT}`);
-    
+    b
  })
+
