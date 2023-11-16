@@ -9,8 +9,17 @@
 // GET localHost:8080/hompage
 
 server.get('/homepage',(request,response)=>{
-    // response.send('<h1>hello node js here</h1>')
-    response.json({name:"sarfraj",age:24})
+    response.send('<h1>hello node js here</h1>')
+})
+
+server.get("/about",(request,response)=>{
+    response.json({
+        color:"red",
+        background:"#fff",
+        name:"sarfraj",
+        age:24
+    });
+
 })
 
  server.listen(PORT,function(){
