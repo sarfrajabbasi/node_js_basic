@@ -4,10 +4,17 @@ require('dotenv').config();
 
  const server = express();
  const PORT = 8080
+
+
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded());
- server.use(express.static(process.env.STATIC_FOLDER))
 
+server.use((req,res,next)=>{
+    console.log(req.ip,req.method,req.path);
+    // next()
+})
+ server.use(express.static(process.env.STATIC_FOLDER))
+ 
 
 // GET localHost:8080/hompage
 
