@@ -1,10 +1,12 @@
 require('dotenv').config(); 
  const express = require('express');
+ const bodyParser = require('body-parser')
 
  const server = express();
  const PORT = 8080
-
- server.use(express.static('public'))
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded());
+ server.use(express.static(process.env.STATIC_FOLDER))
 
 
 // GET localHost:8080/hompage
@@ -26,8 +28,26 @@ server.get("/about",(request,response)=>{
 
 })
 
- server.listen(PORT,function(){
+server.get('/login',(req,res)=>{
+    const query = req.query;
+    const name = req.query.name
+    const age = req.query.age
+    const color = req.query.color
+    //  res.json({name,age,color})
+     res.json(query)
+})
+server.get('/school/:name/:city/:state',(req,res)=>{
+    let school = req.params;
+    res.json(school)
+})
+
+server.post('/person',(req,res)=>{
+    let person = req.body;
+    res.json(person)
+})
+
+ server.listen(process.env.PORT,function(){
     console.log(`Server bind at port no:${PORT}`);
-    b
+
  })
 
