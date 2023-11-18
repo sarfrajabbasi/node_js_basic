@@ -1,7 +1,9 @@
 require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
+const port = process.env.PORT;
 
 const server = express();
 
@@ -50,6 +52,7 @@ server.post("/person", (req, res) => {
   res.json(person);
 });
 
-server.listen(process.env.PORT, function () {
-  console.log(`Server bind at port no:${PORT}`);
+server.listen(port, function () {
+  console.log(`Server bind at port no:${port}`);
+  console.log(`Server restart at at port no:${port}`);
 });
