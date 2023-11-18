@@ -28,7 +28,7 @@ server.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: false }
+  cookie: { secure: false,maxAge:6000 }
 }))
 
 // GET localHost:8080/hompage
@@ -68,6 +68,10 @@ server.post("/person", (req, res) => {
   res.json(person);
 });
 
+server.get('/test',(req,res)=>{
+  req.session.test ? req.session.test++:req.session.test =1;
+  res.send(req.session.test.toString())
+})
 
 server.listen(port, function () {
   console.log(`Server bind at port no:${port}`);
