@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 
 const server = express();
-const PORT = 8084;
 
 server.use(logger());
 server.use(bodyParser.json());
@@ -40,6 +39,7 @@ server.get("/login", (req, res) => {
   //  res.json({name,age,color})
   res.json(query);
 });
+
 server.get("/school/:name/:city/:state", (req, res) => {
   let school = req.params;
   res.json(school);
