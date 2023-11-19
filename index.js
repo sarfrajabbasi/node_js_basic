@@ -26,7 +26,7 @@ const server = express();
 
 const userSchema = new Schema({
     username:{type:String,unique:true},
-    password:Number,
+    password:String,
     name:String,
 })
 
@@ -74,7 +74,7 @@ passport.use(new LocalStrategy(
         return done(null,false,{message:"Incorrect username."})
       }
       // password invaild ha
-      if(!user.password === password){
+      if(!bcrypt.compareSync(password, user.password)){
         return done(null,false,{message:"Incorrect password."})
       }
       // last done mean app authenticate ho gye ho,taki session ke liye woh user store kar sake.
@@ -169,13 +169,13 @@ function isAuthenticated(req,res,done){
 // Register:- 
 server.post('/register',(req,res,done)=>{
 
-  const hash = bcrypt.hashSync(myPlaintextPassword, salt);
+  const hash = bcrypt.hashSync(req.body.password, salt);
 
 User.findOne({username:username},(err,user)=>{
   if(err)done(null,false);
   else if(user)res.redirect('/');
   else{
-    User.create({username:req.body.username,password:req.body.password},(err,user)=>{
+    User.create({username:req.body.username,password:hash},(err,user)=>{
       if(err){done(null,false)};
       done(null,user)
     })
