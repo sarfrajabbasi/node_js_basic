@@ -9,7 +9,7 @@ const session = require("express-session")
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// passport and passport-strategy require
+// import passport and passport-strategy require
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
@@ -91,7 +91,16 @@ passport.serializeUser((user,done)=>{
   // session bana hi nahi ya user ha hi nahi
   return done(null,false)
 })
-passport.deserializeUser()
+
+// same code but id lenge isme
+passport.deserializeUser((id,done)=>{
+  // agar user mil jata ha database ma toh usee done ma bhej dete ha
+  User.findById(id,(err,user)=>{
+    if(err)return done(null,false)
+    // isme user hume mil chuka ha id se
+    return done(null,user)
+  })
+})
 
 
 // EndPoints/API
@@ -133,15 +142,53 @@ server.post("/person", (req, res) => {
   res.json(person);
 });
 
-server.get('/test',(req,res)=>{
+server.get('/test',isAuthenticated,(req,res)=>{
   req.session.test ? req.session.test++:req.session.test =1;
-  res.send(req.session.test.toString())
+  res.send(req.session.test.toString() + "" + req.user.username)
 })
 
+// logout:-
+server.post('/logout',(req,res)=>{
+  // ye logout method passport hi create karega request ma,isse res.session tut jata ha or hume index page dikega
+  req.logOut();
+  res.send("logged out")
+})
+
+function isAuthenticated(req,res,done){
+  if(req.user){
+    // done mean next middleware ko call karna
+    return done()
+  }
+  // app authenticate nahi ho
+  res.redirect("/")
+}
+// Register:- 
+server.post('/register',(req,res,done)=>{
+
+User.findOne({username:username},(err,user)=>{
+  if(err)done(null,false);
+  else if(user)res.redirect('/');
+  else{
+    User.create({username:req.body.username,password:req.body.password},(err,user)=>{
+      if(err){done(null,false)};
+      done(null,user)
+    })
+  }
+})
+
+},passport.authenticate('local'),(req,res)=>{
+  // if this function get called,authentication was successful.
+  // req.user contains the authenticated user.
+  // req.user:-passport apne ap session information isme bhej deta ha or isme data agya to sucessful ho gyi authentication.
+  res.json(req.user)
+});
+
+// Login:- use passport.authenticate(strategy) 
 server.post('/login',passport.authenticate('local'),(req,res)=>{
   // if this function get called,authentication was successful.
   // req.user contains the authenticated user.
-  res.redirect('/')
+  // req.user:-passport apne ap session information isme bhej deta ha or isme data agya to sucessful ho gyi authentication.
+  res.json(req.user)
 });
 
 
