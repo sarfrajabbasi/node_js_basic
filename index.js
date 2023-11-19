@@ -5,6 +5,11 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 const session = require("express-session") 
 
+// bcrypt setup
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+const myPlaintextPassword = 's0/\/\P4$$w0rD';
+
 // mongoose
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
