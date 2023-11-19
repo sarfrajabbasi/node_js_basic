@@ -169,7 +169,7 @@ function isAuthenticated(req,res,done){
 // Register:- 
 server.post('/register',(req,res,done)=>{
 
-const salt = bcrypt.genSaltSync(saltRounds);
+  const hash = bcrypt.hashSync(myPlaintextPassword, salt);
 
 User.findOne({username:username},(err,user)=>{
   if(err)done(null,false);
