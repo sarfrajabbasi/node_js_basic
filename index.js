@@ -61,6 +61,7 @@ passport.use(new LocalStrategy(
   function(username,password,done){
     //ye check karega ki user name match hota ha ki nahi,
     console.log(username,password);
+    // authenticate with mongodb database
     User.findOne({username:username},function(err,user){
   
       if(err){return done(err)}
@@ -73,10 +74,24 @@ passport.use(new LocalStrategy(
         return done(null,false,{message:"Incorrect password."})
       }
       // last done mean app authenticate ho gye ho,taki session ke liye woh user store kar sake.
+      console.log(user)
       return done(null,user)
     })
   }
 ))
+
+// serialization steps
+// create serializer and de-serailizer,input ma callabck leta ha
+
+passport.serializeUser((user,done)=>{
+  if(user){
+    // serializer user ke pure object ko le rha but uski id ko session ma bhej rha h
+    return done(null,user.id)
+  }
+  // session bana hi nahi ya user ha hi nahi
+  return done(null,false)
+})
+passport.deserializeUser()
 
 
 // EndPoints/API
