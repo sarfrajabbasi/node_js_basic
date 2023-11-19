@@ -7,9 +7,9 @@ const session = require("express-session")
 
 // mongoose
 const mongoose = require('mongoose');
-const UserSchema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-// passport and passport-strategy
+// passport and passport-strategy require
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
@@ -53,6 +53,30 @@ server.use(session({
   saveUninitialized: true,
   cookie: { secure: false,maxAge:6000 }
 }))
+
+server.use(passport.initialize())
+server.use(passport.session())
+
+passport.use(new LocalStrategy(
+  function(username,password,done){
+    //ye check karega ki user name match hota ha ki nahi,
+    console.log(username,password);
+    User.findOne({username:username},function(err,user){
+  
+      if(err){return done(err)}
+      // user nahi mila
+      if(!user){
+        return done(null,false,{message:"Incorrect username."})
+      }
+      // password invaild ha
+      if(!user.password === password){
+        return done(null,false,{message:"Incorrect password."})
+      }
+      // last done mean app authenticate ho gye ho,taki session ke liye woh user store kar sake.
+      return done(null,user)
+    })
+  }
+))
 
 
 // EndPoints/API
@@ -98,6 +122,13 @@ server.get('/test',(req,res)=>{
   req.session.test ? req.session.test++:req.session.test =1;
   res.send(req.session.test.toString())
 })
+
+server.post('/login',passport.authenticate('local'),(req,res)=>{
+  // if this function get called,authentication was successful.
+  // req.user contains the authenticated user.
+  res.redirect('/')
+});
+
 
 
 // server listen
