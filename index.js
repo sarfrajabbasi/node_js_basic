@@ -4,9 +4,30 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const session = require("express-session") 
+
+// mongoose
+const mongoose = require('mongoose');
+const UserSchema = mongoose.Schema;
+
+// passport and passport-strategy
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
 const port = process.env.PORT;
 
 const server = express();
+
+// mongoose setups
+ mongoose.connect('mongodb://localhost:27017/NewDB',{useNewUrlParser:true})
+
+const userSchema = new Schema({
+    username:{type:String,unique:true},
+    password:Number,
+    name:String,
+})
+
+const User = mongoose.model('User',userSchema);
+
 
 // morgan
 server.use(logger());
@@ -15,10 +36,12 @@ server.use(logger());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded());
 
+// custom middlware
 server.use((req, res, next) => {
   console.log(req.ip, req.method, req.path);
   next();
 });
+
 // static
 server.use(express.static(process.env.STATIC_FOLDER));
 
@@ -30,6 +53,9 @@ server.use(session({
   saveUninitialized: true,
   cookie: { secure: false,maxAge:6000 }
 }))
+
+
+// EndPoints/API
 
 // GET localHost:8080/hompage
 
@@ -73,6 +99,8 @@ server.get('/test',(req,res)=>{
   res.send(req.session.test.toString())
 })
 
+
+// server listen
 server.listen(port, function () {
   console.log(`Server bind at port no:${port}`);
   console.log(`Server restart at at port no:${port}`);
